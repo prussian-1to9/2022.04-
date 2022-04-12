@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	form {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<!-- form 태그를 만들어봅시다~ -->
+	<form method="GET" action="test02.html">
+		<span>
+			ID : <input type="text" name="id" id="id">
+			<br>
+			PW : <input type="password" name="pw" id="pw">
+			<br>
+		</span>
+<!-- 		<input type="submit" value="제출"> -->
+		<button type="submit"> 제출</button><!-- 얘를 누르면 데이터가 파라미터로 넘어감. -->
+<!-- 		<input type="button" value="click"> 얘는 딱히 제출기능이 없삼. -->
+	</form>
+	<form method="GET" action="/black/"> <!-- localhost는 자동으로 써짐. -->
+		<span>
+			email :
+			<input type="text" name="mail" value="renjun@7dream.com" readonly>
+			<br>
+			tel : 
+			<input type="text" name="tel" value="010-0323-0825" readonly>
+			</span>
+	</form>
+</body>
+</html>
