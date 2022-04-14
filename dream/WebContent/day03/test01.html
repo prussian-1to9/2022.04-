@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<h1>Block Tag</h1>
+		<div style="width: 100px; height: 100px; background-color: aqua;">
+			div
+		</div>
+		<span>span</span>
+		<div style="width: 100px; height: 100px; background-color: aqua;">
+			div
+		</div>
+		<div style="width: 100px; height: 100px; background-color: aqua;">
+			div
+		</div>
+	</div>
+	<hr>
+	<h1>Inline-Block Tag</h1>
+	<div>
+<!-- <div style="font-size: 0pt;"> -->
+		<div style="display: inline-block; width: 10%; height: 100px; background-color: blue; font-size: 10pt; float: left;">
+			div
+		</div><!--
+			이 사이에 있는 tab키, enter키들은 공백에 인식된대!!!
+			그래서 이런식으로 처리하면 공백이 없다네! 새로고침 해보셈!
+			
+			공백 없애는 법
+			1. 이렇게 주석으로 처리
+			2. 상위태그의 폰트 크기를 0으로 설정
+				※ 폰트크기와 같은 속성은 하위태그가 그대로 물려받기에,
+					하위태그에서 재정의 할 필요가 있다.
+	 --><div style="display: inline-block; width: 100px; height: 100px; background-color: blue; font-size: 10pt; display: none;">
+			div
+		</div>
+<!-- 
+	태그 감추는 방법
+	
+		display: none;
+		==> 원래 없던것 처럼 지워진다. 자연스럽다!
+		
+		visibility: hidden;
+		==> 원래 있던 공간은 남아있다. 허전하다!
+ -->
+		<div style="display: inline-block; width: 90%; height: 100px; background-color: blue; font-size: 10pt; float: left;">
+			div
+		</div>
+	</div>
+	<hr>
+	<div>
+		<h1>Inline Tag</h1>
+		<a>여기는 a 태그</a>
+		<div style="border: 1px solid red;">사이에 낀 block tag</div>
+		<label>입 력 : </label>
+		<input type="text" name="test" style="height: 20px; width: 200px">
+		<img src="../image/img/흑발런쥐니.jpg" width="100px" height="auto">
+		<span>여기도 인라인 태그</span>
+	</div>
+</body>
+</html>

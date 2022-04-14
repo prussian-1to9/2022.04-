@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html로 이런것도 된대요</title>
+<link rel= "stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+</head>
+<body> <!-- 이런것도 있다... 정도만 생각하면 될거 같음 -->
+	<div class="w3-content w3-center" style="maxwidth: 600px;">
+		<h1 class="w3-blue w3-card-4 w3-padding">클래스 테스트</h1>
+		<form name="frm" id="frm">
+			<div class="w3-col">
+				<label for="id" class="w3-col m3 w3-text-rigtht">ID</label>
+				<input type="text" name="id" id="id">
+			</div>
+			<div class="w3-col">
+				<label for="pw" class="w3-col m3 w3-text-rigtht">PW</label>
+				<input type="password" name="pw" id="pw">
+			</div>
+		</form>
+		<div class="w3-col">
+			<div class="w3-button w3-green" id="btn1">click</div>
+		</div>
+	</div>
+	
+<script type="text/javascript">
+	document.getElementById('btn1').onclick = function() {
+		var sid = document.getElementById('id').value;
+		var spw = document.getElementById('pw').value;
+		var str = '우리 1002-252-722252 로 입금 부탁\nID : ' + sid + "\nPW : " + spw;
+		alert(str);
+	}
+</script>
+</body>
+</html>

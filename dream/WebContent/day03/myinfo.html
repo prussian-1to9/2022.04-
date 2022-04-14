@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body {
+		text-align: center;
+		background-color: #294787;
+		color: white;
+	}
+	.btn {
+		width: 20%;
+		border: 1px solid #3964BD;
+		background-color: #B8D5FF;
+		color: #3964BD;
+		cursor: pointer;
+	}
+	.btn:hover {
+		background-color: #FFD6E6;
+	}
+	hr {
+		display: inline-block;
+		background-color: #010640;
+		border: 1px solid #010640;
+		width: 40%;
+		text-align: left;
+	}
+	p {
+		color: #010640;
+		margin: 2px;
+		line-height: 130%;
+	}
+	h1 {
+		margin: 2px;
+	}
+</style>
+</head>
+<body>
+	<div style="display: inline-block; width: 1000px;">
+		<header style="height: 250px; overflow: hidden;">
+		<img src="../image/img/뵤.png" style="display: inline-block; position: relative; top:-200px; width: 100%; height: auto; overflow: hidden;">
+		</header>
+		<nav style="font-size: 0pt;">
+			<button type="button" id="btn1" class="btn">기본정보</button>
+			<button type="button" id="btn2" class="btn">좋아하는 것</button>
+			<button type="button" id="btn3" class="btn">공부하는 것</button>
+			<button type="button" id="btn4" class="btn">희망진로</button>
+			<button type="button" id="btn5" class="btn">지원동기</button>
+		</nav>
+		<div style="display: inline-block; width: 25%; height: 700px; float: left; background-color: #1A3666; ">
+			<img src="../image/img/흑발런쥐니.jpg" style='margin: 10px; width: 230px; height: auto;'>
+			이지의 개인정보를 털어가봐요<br>
+			방구뀌고싶다.
+		</div>
+		<section style="float: left; display: inline-block; width: 75%; height: 700px; float: right; background-color: #3359A8;"><!-- 
+		 --><article style="display: inline-block; width: 100%; height: 100%; font-size: 12pt;"
+		 	class="article">
+		 	↖털고싶은 개인정보 탭을 눌러보세요!↗
+		 	</article><!-- 
+		 --><article style="display: none; width: 100%; height: 100%; font-size: 12pt;"
+		 	id="article1" class="article">
+			 	<div style="margin: 15px; text-align: left;">
+				 	<h1>이름</h1>
+				 	<hr noshade>
+				 	<p>최이지</p>		 	
+			 	</div>
+			 	<div style="margin: 15px; text-align: left;">
+				 	<h1>출생년월</h1>
+				 	<hr noshade>
+				 	<p>2000.12</p>		 	
+			 	</div>
+			 	<div style="margin: 15px; text-align: left;">
+				 	<h1>생물학적 정보</h1>
+				 	<hr noshade>
+				 	<p>RH+ A, F</p>		 	
+			 	</div>
+			 	<div style=" margin: 15px; text-align: left;">
+				 	<h1>고향</h1>
+				 	<hr noshade>
+				 	<p>서울</p>		 	
+			 	</div>
+			 	<div style="margin: 15px; text-align: left;">
+				 	<h1>사는 곳</h1>
+				 	<hr noshade>
+				 	<p>서울</p>		 	
+			 	</div>
+		 	</article><!-- 
+		 --><article style="display: none; width: 100%; height: 100%; font-size: 12pt;"
+		 	id="article2" class="article">
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>KPOP</h1>
+				 	<hr noshade>
+				 	<p>예전엔 YG를 제일 좋아했고 두루 좋아했으나 현재는 SM 소속 가수만 좋아함</p>
+					<br><p><del>사실 그냥 예쁜 여자면 다 좋아함</del></p>	 	
+			 	</div>
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>GAME</h1>
+				 	<hr noshade>
+				 	<p>작성일 기준(2022.04.14) 가디언테일즈를 열심히 하고 있음. 간간히 던파.</p>
+				</div>
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>SM 소속 그룹별 최애</h1>
+				 	<hr noshade>
+				 	<p>소녀시대 : 탱구<br>
+				 	슈쥬 : 안좋아함<br>
+				 	샤이니 : 이태민<br>
+				 	f(x) : 최진리<br>
+				 	엑소 : 변백현<br>
+				 	레드벨벳 : 손승완<br>
+				 	NCT : 황인준<br>
+				 	에스파 : 민정쨩</p>
+				 	</div>
+		 	</article><!-- 
+		 --><article style="display: none; width: 100%; height: 100%; font-size: 12pt;"
+		 	id="article3" class="article">
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>공부하는 것</h1>
+				 	<hr noshade>
+				 	<p>HTML5, JDBC</p>
+				</div>
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>어려운것</h1>
+				 	<hr noshade>
+				 	<p>HTML5... 를 CSS랑 JavaScript 같이 써가면서 하니까 어려움!!!</p>
+				</div>
+		 	</article><!-- 
+		 --><article style="display: none; width: 100%; height: 100%; font-size: 12pt;"
+		 	id="article4" class="article">
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>포스타입 입사</h1>
+				 	<hr noshade>
+				 	<p>포스타입 입사하면... 정말 좋겠지요... 월급의 10%정도는 포인트로 주셔도.. 무관합니다..</p>
+				</div>	
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>최종 목표 : 해외취업</h1>
+				 	<hr noshade>
+				 	<p>그치만 영어(+a)를 열심히 해야겠지요... 저도 압니다...</p>
+				 </div>
+		 	</article><!-- 
+		 --><article style="display: none; width: 100%; height: 100%; font-size: 12pt;"
+		 	id="article5" class="article">
+		 		<div style=" margin: 15px; text-align: left;">
+				 	<h1>개요</h1>
+				 	<hr noshade>
+				 	<p>때는 바야흐로 이지가 글을 쓸 시점...<br>
+				 	컴공과 2학년인 서브 캐릭터를 설정하며 현실 고증에 애를 먹고 있었다...<br>
+				 	개발자 외삼촌에게 질문을하며 자료를 얻던 와중<br>
+				 	이지는 문득 '재밌다!!!'는 생각을 하게 된 것이다...</p>
+				 </div>
+		 		<div style="margin: 15px; text-align: left;">
+				 	<h1>결론</h1>
+				 	<hr noshade>
+				 	<p>80%정도는 충동적으로 등록했는데 의외로 넘 잘맞아서 계속 하고이따.</p>
+				 </div>		 	
+		 	</article>
+		</section>
+		<footer style="background-color: #3F6DCF; width: 100%;">
+			<p>더 털고싶은 정보가 있어도 참으세요^^!</p>
+		</footer>
+	</div>
+<script type="text/javascript">
+	document.getElementById('btn1').onclick = function(){
+		var el = document.getElementsByClassName('article');
+		
+		for(var i = 0; i < el.length; i++){
+			el[i].style.display = 'none';
+		}
+		
+		document.getElementById('article1').style.display = 'inline-block';
+	};
+	document.getElementById('btn2').onclick = function(){
+		var el = document.getElementsByClassName('article');
+		
+		for(var i = 0; i < el.length; i++){
+			el[i].style.display = 'none';
+		}
+		
+		document.getElementById('article2').style.display = 'inline-block';
+	};
+	document.getElementById('btn3').onclick = function(){
+		var el = document.getElementsByClassName('article');
+		
+		for(var i = 0; i < el.length; i++){
+			el[i].style.display = 'none';
+		}
+		
+		document.getElementById('article3').style.display = 'inline-block';
+	};
+	document.getElementById('btn4').onclick = function(){
+		var el = document.getElementsByClassName('article');
+		
+		for(var i = 0; i < el.length; i++){
+			el[i].style.display = 'none';
+		}
+		
+		document.getElementById('article4').style.display = 'inline-block';
+	};
+	document.getElementById('btn5').onclick = function(){
+		var el = document.getElementsByClassName('article');
+		
+		for(var i = 0; i < el.length; i++){
+			el[i].style.display = 'none';
+		}
+		
+		document.getElementById('article5').style.display = 'inline-block';
+	};
+</script>
+</body>
+</html>
