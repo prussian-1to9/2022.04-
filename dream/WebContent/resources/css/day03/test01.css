@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+li {
+	display: inline-block;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+}
+
+span {
+	display: block;
+	text-align: left;
+}
+
+li:nth-child(2) + li {
+	background-color: orange;
+}
+
+a:nth-child(2) {
+	display: inline-block;
+	width: 300px;
+	height: 50px;
+	background-color: green;
+}

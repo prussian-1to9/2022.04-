@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.box {
+	display: inline-block;
+	width: 50%;
+	height: 70px;
+	float: right;
+}
+
+.d1 > :first-child {
+	background-color: aqua;
+}

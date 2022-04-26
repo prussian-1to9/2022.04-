@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+h3:nth-child(2) {
+	color: pink;
+}
+
+/* div + h3 {
+	color: red;
+}
+ */
+h3:last-child {
+	color: aqua;
+}
+
+/* p + h3 {
+	color: red;
+} */
+
+h2 + ul {
+	color: #ff5722;
+	text-align: left;
+	list-style: square;
+}

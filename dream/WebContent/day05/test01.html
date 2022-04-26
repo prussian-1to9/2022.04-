@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="GET" action="../day04/day01.html" name="frm"><!-- 
+	GET방식은 url에 정보가 그대로 노출되는(보안에 약한) 반면,
+	POST방식은 그렇지 않다 (하지만 개발자도구엔 뜬다...)
+	 --><input type="text" name="test" id="test">
+		<button type="button" id="btn">click</button>
+	</form>
+<script type="text/javascript">
+	document.getElementById('btn').onclick = function() {
+		var test = document.frm.test.value;
+		
+		alert(test);
+	};
+</script>
+</body>
+</html>

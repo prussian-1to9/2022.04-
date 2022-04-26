@@ -1,0 +1,13 @@
+# day05
+
+여태까지 본 input 태그 type 종류
+
+	text		: 단일행 입력
+	password	: 단일행 입력
+	button
+	submit
+	reset
+	
+  +	다중행 입력 별도 태그 존재 - textarea
+  	ex.
+  		<textarea id="body" name="body"></textarea>

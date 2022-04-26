@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.box65 ul {
+	color: #dc4816;
+	font-weight: bold;
+}
+
+.box65 > div h2 {
+	color: #4f6a77;
+}

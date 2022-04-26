@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+a:link {
+	height: 30px;
+	border: 1px solid gray;
+	text-decoration: none;
+}
+
+[href="test01.html"]:hover {
+	background-color: #ff5722;
+}
+
+[href="test01.html"]:active {
+	background-color: pink;
+}
+
+[type="text"] {
+	display: online-block;
+	width: 300px;
+	height: 25px;
+}
+
+input:focus {
+	font-weight: bold;
+	text-align: center;
+}
+
+input:enabled {
+	margin-bottom: 10px;
+}
+
+input:disabled {
+	margin-top: 50px;
+}
+
+[type="radio"]:checked {
+	width: 30px;
+	height: 30px;
+	background-color: red;
+}
+
+[type="button"] {
+	width: 200px;
+	height: 30px;
+	background-color: #2196F3;
+	cursor: pointer;
+}

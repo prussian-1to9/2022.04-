@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 정보 페이지</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/join.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/membinfo.css">
+<script>
+	const userName = document.getElementById('name').value;
+	document.getElementById("showName").innerText = userName;
+</script>
+</head>
+<body>
+	<div class="content">
+		<header>회원 정보</header>
+		<form>
+			<div class="box700">
+				<div class="avt">
+					<img name="avt" id="avt" src="/dream/resources/img/avatar/img_avatar01.png">
+				</div>
+				<div class="row">
+					<label for="name" class="column">이름 : </label>
+					<div class="cell30" id="showName"></div>
+				</div>
+			</div>
+			<div class="btncell">
+					<button type="button" id="hbtn" onclick="location.href='/dream/index.html';"
+						class="btn" style="background-color: #ffff99; color: #378FFF;">HOME</button><!-- 
+				 --><button type="submit" id="jbtn" 
+							class="btn" style="background-color: #cafb32; color: white;">LIST</button><!-- 
+				 --><input type="reset" id="cbtn" 
+							class="btn" style="background-color: #FFE1E8; color: #444867;" value="RESET">
+				</div>
+		</form>
+	</div>
+</body>
+</html>

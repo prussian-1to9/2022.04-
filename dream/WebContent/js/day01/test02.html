@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/dream/resources/js/day01/test01.js"></script>
+<script type="text/javascript">
+	// 자바스크립트 변수 특징
+	var no = 10; // no - number 타입
+	alert('no : ' + no);
+	
+	no = '10'; // no - 문자열 타입으로 변경
+	alert('문자열 no : ' + no);
+</script>
+</head>
+<body>
+	<h1 id="h1">원래있던 문자열</h1>
+	<div id="d1"></div>
+<script type="text/javascript">
+	alert('아래쪽에서 no 호출 : ' + no);
+	alert('외부변수 num : ' + num);
+	/*
+		자바스크립트 실행 확인법
+		1. alert() 경고창 이용
+		
+		2. console.log 함수 사용
+		==> 일반적으로 서버에서 실행되는 스크립트일 경우 사용된다.
+			(브라우저로 확인할 수 없기 때문.)
+		
+		3. Document.getElementById('아이디').innerHTML = '내용';
+		==> tag에 내용을 입력하는 방법
+		
+		4. document.write('내용');
+	*/
+	console.log('외부변수 num : ' + num);	// 개발자도구 들어가면 console에 찍힘
+	// java의 print함수와 비슷하다.
+	
+	document.write('<h1>외부파일 변수 num : ' + num + '</h1>');
+	document.getElementById('h1').innerHTML = 'inner HTML';
+	// 원래있던 문자열을 대체해버린다.
+	/*
+		입력 tag에선 innerHTML대신 value라는 속성을 이용한다.
+	*/
+	var tmp = '<img src="/dream/resources/img/pic/renjun.jpeg" width="200px" height="auto">';
+	var stag = '';
+	for(var i=0; i<5; i++) {
+		stag += tmp;
+	}
+	document.getElementById('d1').innerHTML = stag;
+</script>
+</body>
+</html>

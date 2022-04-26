@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+ul > li {/* ul태그 하위의 li 태그를 뜻함 */
+/* 단, 반드시 direct-sub tag여야 한다! */
+	display: inline-block;
+	width: 120px;
+	border: 1px solid #804040;
+	list-style: none;
+	padding: 15px;
+	margin-bottom: 5px;
+}
+
+li:first-child {
+	border-radius: 10px;
+}
+
+li:last-child {
+	border-radius: 50%;
+}
+
+/* li:nth-child(2n) {
+	background-color: #800000;
+	color: white;
+}
+
+li:nth-child(2n+1) {
+	background-color: black;
+	color: white;
+} */
+
+li:nth-child(even) {
+	background-color: #800000;
+	color: white;
+}
+
+li:nth-child(odd) {
+	background-color: black;
+	color: white;
+}
+
+li:nth-child(3), li:nth-child(4) {/* 괄호 안에 한번에 두개는 못 온다!*/
+	border: 1px solid gray;
+}
+
+ul * {
+	font-size: 14pt;
+}
+
+ul > span {
+	display: inline-block;
+	width: 120px;
+	padding: 15px;
+	font-size: 10pt;
+}
+
+li:nth-child(3) + li {/* 세번째 형제 태그인 li 태그 다음에 오는 li 태그의 속성을 변경 */
+/*
+	이 구문의 실행 조건)
+		세 번째 형제 태그가 li 여야 함.
+		그 바로 뒤 후술되는 태그 형태도 li여야 함.
+*/
+	background-color: #000040;
+}
+
+li:nth-child(3) ~ span {
+/* 형제 태그 중 세번째인 li 태그 / 의 뒤에 오는 모든 span 태그에 대한 명령 */
+	border: 2px solid gray;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 창을 만들어보자!</title>
+<style>
+	#hbtn {
+		background-color: yellow;
+		border: 1px solid #ff9900;
+	}
+	
+	#hbtn:hover {
+		background-color: orange;
+	}
+	
+</style>
+</head>
+<body>
+	<div style="text-align: center;">
+		<div style="display: inline-block; width: 700px;">
+			<div style="padding: 10px; border: 1px solid gray;">
+				<div style="margin-bottom: 10px;">
+					<label for="id"
+						style="display: inline-block; width: 20%;">ID : </label>
+					<input type="text" name="user" id="id"
+						style="display: inline-block; width: 70%; margin-left: 5px;">
+				</div>
+				<div style="margin-bottom: 10px;">
+					<label for="id"
+						style="display: inline-block; width: 20%;">PW : </label>
+					<input type="password" name="pw" id="password"
+						style="display: inline-block; width: 70%; margin-left: 5px;">
+				</div>
+				<div style="text-align: center;">
+					<button type="button" id="hbtn"
+						style="display: inline-block; width: 30%; height: 30px; cursor: pointer;">HOME</button>
+					<button type="button" id="lbtn"
+						style="display: inline-block; width: 30%; height: 30px; cursor: pointer;">LOGIN</button>
+					<input type="reset" id="cbtn"
+						style="display: inline-block; width: 30%; height: 30px; cursor: pointer;" value="CANCEL">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

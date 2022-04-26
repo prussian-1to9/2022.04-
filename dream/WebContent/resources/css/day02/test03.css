@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.box65 > div > h3 {
+	background-color: #dc4816;
+	color: white;
+}
+
+.box65 > p {
+	background-color: #7c9aa9;
+	color: #4f6a77;
+}
+
+/* .box65 > h3 > tel > home { 얘도 되지만 */
+tel > home {
+	color: #4f6a77;
+	font-style: italic;
+}

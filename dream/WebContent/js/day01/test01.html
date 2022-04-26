@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<script type="text/javascript" src="/dream/resources/js/day01/test01.js">
+// 여기엔 암것도 적으면 안돼용.
+</script>
+<script type="text/javascript">
+/* html 안에 script 태그를 추가하면 : Internal Script
+ 	외부에 .js파일을 만들어 사용하면 : External Script
+ 	
+ 	외부 js파일 사용시)
+ 		<script type="text/javascript" src="경로"></ script>
+ */
+/* script 타입이 굉장히 많기 때문에, 기술해주는것이 좋다.*/
+	alert('자바스크립트 test');
+// 주석처리는 java와 동일.
+</script>
+</head>
+<body>
+</body>
+	<div class="w3-content mx650">
+		<h1 class="w3-purple" id="h1" onclick="alert('인라인 스크립트')">자바스크립트 첫 파일</h1>
+	</div>
+<script type="text/javascript">
+/* body 태그 안쪽에 스크립트 태그가 필요하면
+	맨 아래쪽에 작성하는게 좋다. (공간 잡아먹으니께.)
+ */
+ 	document.getElementById('h1').setAttribute('class', 'w3-center w3-blue');
+	alert('경고창');
+</script>
+</html>

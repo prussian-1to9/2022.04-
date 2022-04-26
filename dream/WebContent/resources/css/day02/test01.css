@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.d1 > *:first-child {
+	background-color: black;
+	color: white;
+}
+
+.d1 > *:last-child {
+	font-size: 16pt;
+	font-style: italic;
+	font-weight: nomal;
+	background-color: #800080;
+	color: white;
+}
+
+.d1 > *:nth-child(2) {
+	padding: 30px;
+	text-align: center;
+	border-top: 5px solid gray;
+}
+
+.d1 > * :nth-chlid(2n) {
+	background-color: blue;
+}
+
+.d1 > *:nth-child(2n-1) {
+	padding: 50px;
+	text-align: right;
+}

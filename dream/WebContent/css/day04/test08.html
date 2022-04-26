@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<style>
+	.mx600 {
+		max-width: 600px;
+	}
+	h1 ~ div {
+		width: 150px!important;
+		height: 150px;
+	}
+	.mx600 > .w3-khaki {
+		display: none;
+	}
+	#menu1 {
+		position: relative;
+		left: -150px;
+		top: -15px;
+		opacity: 0;
+	}
+	#menu1:hover {
+		opacity: 1;
+	}
+</style>
+</head>
+<body>
+<!-- 
+	태그 숨기기
+	
+	1. display 속성
+	
+	2. visibility 속성
+ -->
+ 	<div class="w3-content w3-center mx600">
+ 		<h1 class="w3-purple w3-padding">태그숨기기</h1>
+ 		<div class="w3-col w3-orange w3-border" id="d1">div1</div>
+ 		<div class="w3-col w3-amber w3-border">div2</div>
+ 		<div class="w3-col w3-yellow w3-border">div3</div>
+ 		<div class="w3-col w3-khaki w3-border">div4</div>
+ 		<div class="w3-col w3-lime w3-border">div5</div>
+ 		<div class="w3-col w3-green w3-border">div6</div>
+ 		<div class="w3-col" id="menu1">
+ 			<div class="w3-col w3-blue">
+ 				<ul>
+ 					<li>메뉴1</li>
+ 					<li>메뉴2</li>
+ 					<li>메뉴3</li>
+ 				</ul>
+ 			</div>
+ 		</div>
+ 	</div>
+ 
+ <script type="text/javascript">
+ 	document.getElementById('d1').onMouseOver = function() {
+ 		alert('#################');
+ 	};
+ </script>
+</body>
+</html>

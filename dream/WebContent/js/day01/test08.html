@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.alert('window alert');	// window 객체 소속 변수는 'window.' 생략 가능.
+	
+	var sno = '10';
+	var no = 10;
+	if(sno == no) {	// 원래라면 false가 나와야 한다.
+		window.alert('sno와 no는 같습니다.');
+	/*
+		==	: 값이 같다 (데이터 타입 무관)
+		===	: 값과 데이터 타입 모두 같다.
+	*/
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
