@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 홈버튼 이벤트
+		$('#hbtn').click(function(){			
+			$(loaction).attr('href', '/dream/');
+		});
+		
+		// 리셋버튼 이벤트
+		$('#rbtn').click(function(){			
+			document.frm.reset();
+		});
+		
+		// idCheck버튼 이벤트
+		$('#ibtn').click(function(){
+			// 입력된 id 가져오기
+			var sid = $('#id').val();
+			
+			if(!sid){// id 입력값이 없으면 함수 종료
+				alert('ID를 입력하세요.');
+				$('#id').focus();
+				return;
+			}
+
+			// 비동기 통신 : 객체화
+			$.ajax({
+				url: '/dream/idCheck.pink',	// 요청할 주소 기입
+				type: 'POST',	// 데이터 전송 방식
+				dataType: 'json',	// 결과문서 형식 지정(html, xml, txt, json . . .)
+				data: {
+					// 서버에게 전달할 데이터 작성. (javascript 객체로)
+					id: sid
+				},
+				success: function(data){// 서버와 통신이 이루어졌을 경우.
+					// 매개변수 data엔 응답문서 내용이 채워진다.
+					
+					// 중복 체크
+					var result = data.result;
+					if(result == 'NO'){
+						alert('중복된 ID 입니다.');
+						$('#id').val('');
+						$('#id').focus();
+					} else {
+						alert('사용가능한 ID 입니다.');
+					}
+				},
+				error: function(){
+					alert('통신 에러 발생');
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<!-- jq01.test05.html 에서 복사함 -->
+	<div class="w3-content w3-center mx650"><!-- 나는 그림자 뺐음. -->
+		<h1 class="w3-blue w3-padding w3-margin-bottom w3-round-large" id="h1">Login</h1>
+		<form method="GET" action="/dream/idCheck.pink" name="frm" id="frm"
+			class="w3-col w3-padding w3-margin-top w3-round-large">
+		<div class="w3-col w3-margin-top">
+			<label for="id" class="w3-col m3 w3-right-align w3-text-grey"> ID : </label>
+			<input type="text" id="id" name="id" style="margin-left:10px;"
+				class="w3-col m7 w3-input w3-border" placeholder="ID 입력">
+		</div>
+		<div class="w3-col w3-margin-top w3-margin-bottom">
+			<label for="pw" class="w3-col m3 w3-right-align w3-text-grey">PW : </label>
+			<input type="password" id="pw" name="pw" style="margin-left:10px;"
+				class="w3-col m7 w3-input w3-border" placeholder="PW 입력">
+		</div>
+		</form>
+		<div class="w3-col w3-margin-top"><!-- 그림자 없이 진행 -->
+			<div class="w3-third w3-button w3-green w3-hover-lime" id="hbtn">Home</div>
+			<div class="w3-third w3-button w3-blue w3-hover-aqua" id="ibtn">idCheck</div>
+			<div class="w3-third w3-button w3-pink w3-hover-red" id="rbtn">Reset</div>
+		</div>
+	</div>
+</body>
+</html>

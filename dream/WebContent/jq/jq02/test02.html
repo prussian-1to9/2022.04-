@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btn').click(function(){
+			var el = $('input');
+			for(var i=0; i<el.length; i++){
+				if(el.eq(i).is(':checked')){
+					var txt = $(el).eq(i).val();
+					alert(txt);
+					
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mx650 w3-center">
+		<h1 class="w3-blue w3-padding">is() Test</h1>
+		<div class="w3-col w3-margin-top">
+			<div class="w3-col w3-margin-top">
+				<label class="w3-col m2 w3-right-align">
+					<input type="checkbox" name="subj" value="java">
+				</label>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

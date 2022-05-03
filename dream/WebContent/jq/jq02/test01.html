@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 포함한 텍스트로 선택
+		$('#list1 > li:contains("네")').css('color', 'red');
+
+		// 특정 태그 포함 조건으로 선택, 그 태그만 변경
+		$('#list1 span:contains("세")').css('color', 'blue');
+		
+		// 가장 가까운 하위 요소 찾아 선택
+		$('li').contents().css('font-size', '24pt');
+		
+					// 첫번째 li태그 뒤에오는 태그 			// 필터링 하기 전 결과 선택
+		$('#list1 > li').eq(0).next().css('color', 'pink').end().css('font-size', '16pt');
+		
+		// 여러개 동시 처리도 가능!
+		$('li').eq(4).css('display', 'inline-block').css('color', 'green').css('font-weight', 'bold');
+
+		// id로 선택
+		$('li').filter('#l4').html('4th 목록');
+		$('li').filter('#l5').css('font-size', '20pt');
+	});
+</script>
+</head>
+<body>
+	<div class="w3-center w3-content mx650">
+		<ul id="list1">무순서 목록 태그
+			<li>첫 번째 목록</li>
+			<li>두 번째 목록</li>
+			<li><span>세 번째</span> 목록</li>
+			<li id="l4">네 번째 목록</li>
+			<li id="l5">다섯 번째 목록</li>
+		</ul>
+	</div>
+</body>
+</html>

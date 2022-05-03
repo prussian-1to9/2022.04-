@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript">
+	// JSON 형 객체
+	var arr = {
+		'키값1': '데이터1',	
+		'키값2': '데이터2',	
+		'키값3': '데이터3'
+	};
+	
+	var obj = {
+		var1: '데이터1',
+		var2: '데이터2',
+		var3: '데이터3',
+		func01: function(){
+			
+		},
+		func02: function(){
+			
+		}			// 이러이러한것들이 들어갈 수 있다.
+		// var 타입은 단순한 데이터 형태가 아닌, 포괄적이라고 이해만 하자!
+	};
+</script>
+</head>
+<body>
+	<form method="get" action="test01.html" id="frm" class="w3-center w3-content mx650">
+		<select name="sel" class='w3-col m3 w3-select w3-border'>
+			<option value="1">java</option>
+			<option value="2">db</option>
+			<option value="3">html</option>
+			<option value="4">java script</option>
+			<option value="5">jQuery</option>
+		</select>
+		<input type="file" name="file" id="file" class="w3-col m8 w3-input w3-border">
+	</form>
+<script type="text/javascript">
+//	document.getElementById('frm').submit();
+	document.getElementById('file').onchange = function() {
+		// 값 가져오기
+		var sfile = this.value;
+		
+		// 띄워봅시당.
+//		alert(sfile);	// 보안을 위해 정확한 경로 대신 fakepath가 뜬다.
+		
+		document.getElementById('file').submit();
+	};
+</script>
+</body>
+</html>

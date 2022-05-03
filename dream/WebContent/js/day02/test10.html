@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 배열 생성
+	var arr = ['서울', '인천', '부산'];
+	
+	// 문자열 더하기
+	var city = arr.concat('대전', '대구');
+	
+	document.write('<h3>city type : ' + (city instanceof Array)?'배열':'배열아님' + '</h3>');
+	document.write('<h3>' + city + '</h3>');
+	
+	// arr과 city 를 결합해보자.
+	var dosi = arr.concat(city);
+	document.write('<h3>' + dosi + '</h3>');
+	
+	// join 함수와 달리 형식을 따로 지정해줄 수 없지만, 바로바로 값을 넣어줄 수 있다.
+</script>
+</head>
+<body>
+
+</body>
+</html>

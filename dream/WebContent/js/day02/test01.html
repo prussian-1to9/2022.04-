@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<style type="text/css">
+	[name="subj"] {
+		position: relative;
+		top: 20px;
+		right: 20px;
+	}
+</style>
+</head>
+<body>
+	<form method="GET" action="../day01/test01.html" name="frm" id="frm"
+		class="w3-content mx650">
+		<h3 class="w3-orange w3-padding">スキキライ</h3>
+		<div>
+			<label class="w3-col m2 w3-right-align">과목 : </label>
+			<div class="w3-col m10 w3-center">
+				<div class="box w200 w3-border">
+					<h3 class="w3-col m10">java</h3>
+					<input type="radio" name="subj" id="java">
+				</div>
+				<div class="box w200 w3-border">
+					<h3 class="w3-col m10">DB</h3>
+					<input type="radio" name="subj" id="db">
+				</div>
+				<div class="box w200 w3-border">
+					<h3 class="w3-col m10">html</h3>
+					<input type="radio" name="subj" id="html">
+				</div>
+				<div class="box w200 w3-border">
+					<h3 class="w3-col m10">java script</h3>
+					<input type="radio" name="subj" id="js">
+				</div>
+				<div class="box w200 w3-border">
+					<h3 class="w3-col m10">JSP</h3>
+					<input type="radio" name="subj" id="jsp">
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="w3-content mx650 w3-margin-top w3-border w3-center">
+		<h3 id="msg"></h3>
+	</div>
+<script type="text/javascript">
+// html은 위에서 아래로 문서를 읽기 때문에, 태그가 만들어진 후에 script를 생성해야 에러가 안남.
+</script>
+</body>
+</html>

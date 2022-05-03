@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//배열 초기화
+	var arr1 = [];
+	
+	// 1~100 데이터 채우기
+	for(var i = 0 ; i < 100 ; i++ ){
+		arr1[i] = i + 1;
+	}
+	
+	// 출력
+	for(var i = 0 ; i < arr1.length ; i++ ){
+		document.write(arr1[i] + ', ');
+	}
+	document.write('<br>');
+	document.write('<br>');
+	
+	// 홀수번째 데이터 0으로 초기화하기
+	for(var i = 0 ; i < arr1.length ; i++ ){
+		// index가 짝수면(숫자가 홀수) 0으로 초기화
+		if(i % 2 == 0){
+			arr1[i] = 0;
+		}
+	}
+	
+	// 화면에 출력
+	for(var i = 0 ; i < arr1.length ; i++ ){
+		document.write(arr1[i] + ', ');
+	}
+	document.write('<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

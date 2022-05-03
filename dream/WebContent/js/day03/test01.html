@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	alert(Number.MAX_VALUE);	// number 타입 데이터의 최대 크기 (상수)
+	var kdata = ['서울', '부산', '구포', '대구', '인천', '대전', '세종'];
+	
+	var str1 = kdata.slice(1, 4);	// index 1~4인 elements를 뽑아냈음
+	document.write(kdata + '<br>');
+	document.write(str1);
+	
+	var str2 = kdata.slice(2, -1);	// -1은 뒤에서부터 셈.
+	var str3 = kdata.slice(-4, -2);
+	
+	document.write('<h4>str2 : ' + str2 + '</h4>');
+	document.write('<h4>str3 : ' + str3 + '</h4>');
+	
+	document.write('<hr>');
+	
+	document.write('<h3>splice</h3>');
+	var str4 = kdata.splice(3, 4);	// 얘는 매개변수가 (index, 개수)
+	document.write('<h4>str4 : ' + str4 + '</h4>');
+	document.write(kdata + '<br>');	// cliping 이 아니라 잘라내기가 된다!
+	
+	var str5 = kdata.splice(2, 2, '강릉', '아산');	// (index, 개수, 대체값1, 대체값2, 대체값 . . .)
+	document.write('<h4>str5 : ' + str5 + '</h4>');
+	document.write('kdata : ' + kdata + '<br>');
+	
+	var str6 = kdata.splice(2, Number.MAX_VALUE);
+	document.write('<h4>str6 : ' + str6 + '</h4>');
+	document.write('kdata : ' + kdata + '<br>');
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DREAM BOARD</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// JSON 테이터 불러주기
+		$.ajax({
+			url:'/dream/jq/jq03/board.json',
+			type:'POST',
+			dataType:'json',
+			success:function(arr){
+				$.each(arr, function(idx, data){
+					$('#brd').append(
+						'<div class="w3-col w3-border-bottom" id="' + data.bno + '">' +
+							'<div class="w3-col m2 w3-border-right">' + data.bno + '</div>' +
+							'<div class="w3-col m3 w3-border-right">' + data.id + '</div>' +
+							'<div class="w3-col m5 w3-border-right">' + data.title + '</div>' +
+							'<div class="w3-col m2">' + data.wdate + '</div>' +
+						'</div>'
+					);
+					
+					// 클릭 이벤트 추가
+					$('#' + data.bno).click(function(){
+						$('#detail').css('display', 'block');
+					});
+					
+					// 팝업 이벤트 추가
+					$('#' + data.bno).click(function(){
+						$('#mbno').html(data.bno);
+						$('#mid').html(data.id);
+						$('#mdate').html(data.wdate);
+						$('#avtimg').attr('src', '/dream/resources/img/avatar/' + data.savename);
+						$('#mtitle').html(data.title);
+						$('#mbody').html(data.body.replace(/\r\n/g, '<br>'));
+					});
+				});
+			},
+			error:function(){
+				alert('통신 에러 발생');
+			}
+		});
+		
+		// 팝업 닫는 이벤트
+		$('#cbtn').click(function(){
+			$('#detail').css('display', 'none');
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mx650 w3-center">
+		<h1 class="w3-blue w3-padding">Dream Board</h1>
+		<div class="w3-col w3-card-4" id="brd">
+			<div class="w3-col w3-yellow w3-border">
+				<div class="w3-col m2">글번호</div>
+				<div class="w3-col m3">작성자</div>
+				<div class="w3-col m5">타이틀</div>
+				<div class="w3-col m2">작성일</div>
+			</div>
+		<!-- <div class="w3-col w3-border">
+				<div class="w3-col m2 w3-border-right">10001</div>
+				<div class="w3-col m2 w3-border-right">chenle_1122</div>
+				<div class="w3-col m5 w3-border-right">Buff1</div>
+				<div class="w3-col m3">2022/05/03</div>
+			</div> -->
+		</div>
+	</div>
+	
+	<!-- modal -->
+	<div id="detail" class="w3-modal">
+		<div class="w3-modal-content w3-animate-top w3-card-4" style="max-width: 700px;">
+			<header class="w3-container w3-blue">
+				<span id="cbtn" class="w3-button w3-display-topright">&times;</span>
+				<h2 class="w3-center">게시글 상세보기</h2>
+			</header>
+			<div class="w3-container w3-margin-top w3-margin-bottom">
+				<div class="w3-col" style="width:170px; padding-right:20px;">
+					<div class="box avtbox overhidden w3-circle">
+						<img class="avtimg" src="/dream/resources/img/avatar/noimage.jpg" id="avtimg">
+					</div>
+				</div>
+				<div class="w3-rest">
+					<h6>글 번호 : <span id="mbno"></span></h6>
+					<h6>작성자 : <span id="mid"></span></h6>
+					<h6>작성일 : <span id="mdate"></span></h6>
+				</div>
+				<hr class="leftclear" style="margin: 0px;">
+				<div class="w3-col">
+					<h3 class="w3-col m3">글 제목 : </h3>
+					<h3 class="w3-col m9" id="mtitle"></h3>
+					<div class="w3-col m3"><p></p></div>
+					<p class="w3-col m9 w3-round-large w3-border" id="mbody"></p>
+				</div>
+			</div>
+			<footer class="w3-content w3-margin-top">
+				<div class="w3-third w3-pale-yellow w3-button" id="ebtn">Edit</div>
+				<div class="w3-third w3-yellow w3-button" id="lbtn">List</div>
+				<div class="w3-third w3-pale-yellow w3-button" id="dbtn">Delete</div>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

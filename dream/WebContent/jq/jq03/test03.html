@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		// 비밀번호 확인이 초기값과 같은지 확인
+		$('#repw').keyup(function(){
+			var pw = $('#pw').val();
+			var repw = $('#repw').val();
+			
+			if(pw == repw){
+				$('#repw').remove('name');
+				$('#ckmsg').html('');
+				$('#ckmsg').css('display', 'none');
+			}else{
+				$('#ckmsg').html('비밀번호가 다릅니다.').css('color', 'red');
+				$('#ckmsg').css('display', 'block')
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-cetner mx650">
+		<input type="password" id="pw" class="w3-input w3-border">
+		<input type="password" id="repw" class="w3-input w3-border">
+		<p id="ckmsg"></p>
+	</div>
+</body>
+</html>

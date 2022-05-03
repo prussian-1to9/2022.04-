@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		var el = $('.h1');
+		
+//		el.innerHTML = 'javascript에서 바꿨음.';	jQuery 객체라 자바스크립트 X
+		$(el).get(0).innerHTML = 'jQuery에서 바꿨음.';		
+	});
+</script>
+</head>
+<body>
+	<div class="mx650 w3-content w3-center">
+		<h1 class="w3-blue h1">Title</h1>
+		<h2 class="w3-blue h1">Title</h2>
+		<h3 class="w3-blue h1">Title</h3>
+		<div class="w3-button w3-col w3-lime"></div>
+	</div>
+</body>
+</html>

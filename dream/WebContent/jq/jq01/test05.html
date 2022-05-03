@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	// jQuery로 입력
+	$(document).ready(function(){	// 페이지가 로딩되면 실행할 함수
+		
+		// reset 버튼 기능 생성
+		document.getElementById('rbtn').onclick = function() {
+			document.getElementById('id').value = '';
+			document.getElementById('pw').value = '';
+		};
+		
+		// login 버튼 클릭시
+		$('#lbtn').click(function(){
+			
+			// id, pw 값 따옴
+			var sid = $('#id').val();
+			var spw = $('#pw').val();
+/*
+	jQuery의
+		$(요소).val()	과		(데이터 세팅은 괄호 안에 값 입력)
+	java script의
+		document.getElementById('아이디').value	는 같다!
+								(데이터 세팅은 등호를 후술하고 값 입력)
+ */
+			// id=h1 태그에 입력된 id, pw 삽입
+			$('#h1').html(sid + ' - ' + spw);
+		});
+	});
+</script>
+</head>
+<body><!-- js.day05.test07.html과 조금 다른 로그인 폼 -->
+	<div class="w3-content w3-center mx650"><!-- 나는 그림자 뺐음. -->
+		<h1 class="w3-blue w3-padding w3-margin-bottom w3-round-large" id="h1">Login</h1>
+		<form method="GET" action="#" name="frm" id="frm"
+			class="w3-col w3-padding w3-margin-top w3-round-large">
+		<div class="w3-col w3-margin-top">
+			<label for="id" class="w3-col m3 w3-right-align w3-text-grey"> ID : </label>
+			<input type="text" id="id" name="id" style="margin-left:10px;"
+				class="w3-col m7 w3-input w3-border" placeholder="ID 입력">
+		</div>
+		<div class="w3-col w3-margin-top w3-margin-bottom">
+			<label for="pw" class="w3-col m3 w3-right-align w3-text-grey">PW : </label>
+			<input type="password" id="pw" name="pw" style="margin-left:10px;"
+				class="w3-col m7 w3-input w3-border" placeholder="PW 입력">
+		</div>
+		</form>
+		<div class="w3-col w3-margin-top"><!-- 그림자 없이 진행 -->
+			<div class="w3-third w3-button w3-green w3-hover-lime" id="hbtn">Home</div>
+			<div class="w3-third w3-button w3-blue w3-hover-aqua" id="lbtn">Login</div>
+			<div class="w3-third w3-button w3-pink w3-hover-red" id="rbtn">Reset</div>
+		</div>
+	</div>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

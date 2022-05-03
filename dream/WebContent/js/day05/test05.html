@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var my_div = null;
+	var newDiv = null;	// 함수 안에서 쓸 변수들 초기화
+	
+	function addElement(){
+		// 새로운 div 생성
+		newDiv = document.createElement('div');	// 메모리 상에 div 태그 하나 생성
+		
+		// 생성된 태그에 내용 추가
+		newDiv.innerHTML = '<h1>태그 추가됨.</h1>';
+		
+		// 생성된 태그를 문서에 추가
+		my_div = document.getElementById('d1');
+		document.body.insertBefore(newDiv, my_div);	// my_div 전에 newDiv를 추가하겠다!
+	}
+</script>
+</head>
+<body onload="addElement()">
+	<div id="d1">위 문장은 동적으로 만들어진 것입니다.</div>
+</body>
+</html>

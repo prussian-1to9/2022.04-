@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	// date관련 함수들~
+/*	var day = new Date();	// 생성자를 비워두면 sysdate가 입력됨!
+	alert(day); */
+	
+	// 요일 꺼내는 함수
+	function wday(num) {
+		// 반환값 변수
+		var result = '';
+		
+		switch(num) {
+		case 0:
+			result = '일요일';
+			break;
+		case 1:
+			result = '월요일';
+			break;
+		case 2:
+			result = '화요일';
+			break;
+		case 3:
+			result = '수요일';
+			break;
+		case 4:
+			result = '목요일';
+			break;
+		case 5:
+			result = '금요일';
+			break;
+		case 6:
+			result = '토요일';
+			break;
+		}
+		return result;
+		// GO TO BOTTOM!
+	}
+	
+</script>
+</head>
+<body>
+	<h3 class="w3-center w3-blue" id="d1"></h3>
+	<h3 class="w3-center w3-blue" id="d2"></h3>
+	<h3 class="w3-center w3-blue" id="d3"></h3>
+	<h3 class="w3-center w3-blue" id="d4"></h3>
+<script type="text/javascript">
+	document.getElementById('d2').innerHTML = new Date(1491803527400);
+	
+	var day = new Date();	// 현재시간
+	
+	// 년 월 일 시간 분 초		로 나누기
+	var msg = day.getFullYear() + '년 ' + (day.getMonth() + 1) + '월 '	// 0~11로 반환해서 +1
+		+ day.getDate() + '일 ' + wday(day.getDay()) + ' ' + day.getHours() + '시 '	// hour's' 주의!
+		+ day.getMinutes() + '분 ' + day.getSeconds() + '초 ';	// 얘네도 s 주의!
+		
+	// d3에 추가
+	document.getElementById('d3').innerHTML = msg;
+	
+	// GO TO THE TOP!
+	// returned : function 'wday' updated at msg
+	
+</script>
+</body>
+</html>

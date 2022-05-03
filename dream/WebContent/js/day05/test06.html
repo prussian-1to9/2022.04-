@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var el = document.createElement('div');	// div 태그 생성
+	el.setAttribute('class', 'w3-pink w3-padding w3-card-4');	// 클래스 지정
+	
+	var sub = document.createElement('h1');	// h1 태그 생성
+	sub.setAttribute('class', 'w3-pink w3-padding w3-card-4');
+	sub.innerHTML = '추가된 태그';	// h1 태그 안에 들어갈 내용
+	
+	el.append(sub);	// div 태그 안에 h1 태그 입력
+	
+	document.body.append(el);	// html문서에 h1태그 입력된 div 태그 입력
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 해당 글이 클릭됐을때의 함수
+		$('brd').click(function(){
+			// 데이터 읽기
+			var sno = $(this).attr('id');
+			
+			// hidden input 태그에 채워주기
+			$('#bno').val(sno);
+			
+			// 폼 전송
+			$('#frm').submit();
+		});
+	});
+</script>
+</head>
+<body>
+	<!-- 데이터 전송용 태그 -->
+	<form method="GET" action="test01.html" name="frm" id="frm">
+		<input type="hidden" name="bno" id="bno">
+	</form>
+	<div class="w3-content mx650 w3-center">
+		<h1 class="w3-yellow w3-card-4">방명록</h1>
+		<div class="w3-col w3-margin-top w3-padding">
+			<div class="w3-col w3-card-4 w3-margin-top brd" id="10001"><!-- 게시글 하나 -->
+			<!-- 
+				게시판 테이블
+					일련번호, 작성자, 타이틀, 작성일, 글 본문
+				으로 정의되고, 게시글 하나를 선택할 기본키는 일련번호다.
+				게시글 하나가 선택되면 해당 글의 기본키를 알 수 있게 하자.
+			 -->
+				<h4 class="w3-col m6 w3-align-right">황인준</h4>
+				<h6 class="w3-col m">2022.05.02</h6>
+				<hr>
+				<p>이주니 왔다감</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

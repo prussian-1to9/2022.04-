@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// string 관련 함수들~~
+	
+	var str = 'hello';
+	alert(typeof str);	// 소문자 string이 나옴!
+	
+	var str1 = new String();	// String 클래스의 객체기 때문에
+	alert(typeof str1);	// object로 나옴!
+	
+	var idx = str.indexOf('llo');
+	alert(idx);	// 시작 index를 반환함.
+	
+	// substring도 해봅시다. (자바와 달리 camel 표기 X)
+	var str2 = str.substring(2, 4);
+	alert(str2);	// sql처럼 후술된 index 직전까지만 잘라옴.
+	
+	// slice도 해봅시다.
+	var result = str.slice(1, 4);
+	alert(result);
+	alert(str);	// 그대로임.
+/*
+	substring과 slice의 차이
+	
+	1. 시작값 > 끝값일 경우
+		substring	: 시작값, 끝값 자동 도치
+		slice		: empty string ("") 반환
+			
+	2. (시작값, 끝값 무관) index 값이 음수일 경우
+		substring	: 0으로 치환
+		slice		: 끝에서부터 셈 (substring 말고 substr 함수는 동일)
+--------------------------------------------------------------------
+ */
+	var msg = 'h e l l o';
+	result = msg.replace(' ', '');
+	alert('#' + result + '#');
+	
+	result = str.substr(0, 4);	// 얜 파라미터가 시작값, 끝값이 아니라
+								// 시작값, 글자 수		임!
+	alert(result);
+	
+	
+	result = str.match('el');
+	if(result){// 일치하는게 있으면 해당 문자열, 없으면 null 반환
+		alert(result);
+	
+	}else{// null인 경우
+		alert('str변수에 해당 문자 없음');
+	}
+	// 비슷한 함수로 search가 있는데, 얜 반환값이 index다. (처음 해당값의 첫 index만 반환)
+	// 찾지못하면 null이 아닌, -1을 반환한다.
+	
+	var result = 'abcd'.concat('efg');
+	alert(result.length + ' - ' +result);
+	
+	
+	// trim
+	str = '           ab       cd   efg'
+	result = str.trim();
+	alert(result);	// 맨 앞과 맨 뒤의 공백을 제거해줌.
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

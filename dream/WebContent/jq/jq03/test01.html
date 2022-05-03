@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var el = 4('#d1').contents();	// 모든 자식 노드 선택. 아래에서 길이로 변환
+		$('body').append('<h1 class="w3-center">node 개수 : ' + el.length + '</h1>');
+		
+		$(el).eq(0).css('color', 'red');	// 안됨
+		$('#sp1').css('color', 'red');	//이렇게 해야됨
+		// javascript : $(el).get(0).nodeValue;
+		
+		var el2 = $('#d1').children();
+		$('body').append('<h1 class="w3-center">자식태그 개수 : ' + el2.length + '</h1>');
+		
+		$('h1').next().append('<h4>추가된 h4 태그</h4>');
+		
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-center mx650" id="d1">
+		첫번째 <span id="sp1">div</span> 태그
+		<h1>타이틀</h1>
+		<div class="w3-col">
+			<p>p태그</p>
+		</div>
+	</div>
+	문자열
+	<div>
+		<div class="box wh100 ml10"><p></p></div>
+		<div class="box wh100 ml10"><p></p></div>
+		<div class="box wh100 ml10"><p></p></div>
+	</div>
+</body>
+</html>

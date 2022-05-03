@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 이름, 숫자 입력받아 해당 학생이 덧셈을 하는 함수.
+	function addNum(name, no) {
+		// 학생이름 출력
+		document.write('<h1>' + name + ' 학생이 1부터 ' + no + '까지 더하는 작업을 합니다.</h1>');
+		
+		// 덧셈
+		var sum = 0;	// 반환값 초기화
+		for(var i=0; i<= no; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+	
+//		var result = addNum('런쥔', 323) // 함수호출을 이렇게 해도 되지만
+		var func01 = addNum;	// 이렇게 변수에 담을 수도 있다!
+		
+		var name = '황인준';
+		var num = 100;
+		var result = func01(name, num);
+		document.write('<h1>' + name + ' 이(가) 0부터 ' + num + 
+				' 까지 더한 값은 ' + result + ' 입니다.</h1>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('#file').change(function(){	// onchange 가 아니다!
+			var sfile = $(this).val();
+			$('.w3-content').append('<h1>선택한 파일 : ' + sfile + '</h1>');
+		});
+		
+		$('#in01').on({
+			// 여러개의 함수 정리 : by Using JSON
+			focus: function(){
+				$(this).removeClass('w3-lime').addClass('w3-pale-blue');				
+			},
+			blur: function(){
+				$(this).removeClass('w3-pale-blue').addClass('w3-lime');				
+			},
+			change: function(){
+				// 데이터 읽어오기
+				var txt = $(this).val();
+				
+				$('.w3-content').prepend('<div>' +
+						'<h4>읽은 데이터 : ' + txt +'</h4>'
+						+ '</div>');				
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content w3-center mx650">
+		<!-- 읽은데이터 추가해줄 공간 -->
+		<h1 class="w3-yellow w3-padding w3-card-4">Focus Test</h1>
+		<input type="text" class="w3-input w3-lime" id="in01">
+		<label class="w3-col m2 w3-right-align">File : </label>
+		<input type="file" id="file" class="w3-col m9 w3-input w3-border">
+	</div>
+</body>
+</html>

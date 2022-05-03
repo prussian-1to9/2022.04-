@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+	.bdy {
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$('.brd').on({
+			click: function(){
+				var st = $(this).find('.bdy').css('display');
+				if(st == 'none'){
+					$(this).find('.bdy').show(1000);	// ms 단위
+				}else{
+					$(this).find('.bdy').hide(1000);
+				}
+				// 간단하게 $(this).find('.bdy').toggle(1000); 해줘도 됨!
+				// fadeToggle : 노출/비노출 컨텐츠가 fadein / fadeout(투명도) 된다.
+				// sildeToggle : 노출/비노출 컨텐츠가 sildeup / sildedown 한다.
+			},
+			
+			mouseenter: function(){
+				$(this).find('.bdy').stop().slideDown(1000);
+				// stop() 이 없으면 원래 실행되던 event 함수가 계속 실행된다.
+			},
+			
+			mouseleave: function(){
+				$(this).find('.bdy').stop().slideUp(1000);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mx650 w3-center">
+		<h1 class="w3-yellow w3-card-4">방명록</h1>
+		<div class="w3-col w3-margin-top w3-padding">
+			<div class="w3-col w3-card-4 w3-margin-top brd" id="10001">
+				<h4 class="w3-col m6 w3-left-align">황인준</h4>
+				<h6 class="w3-third w3-right-align w3-right">2022.05.02</h6>
+				<div class="bdy">
+					<hr style="clear:left;">
+					<p>이주니 왔다감</p>
+				</div>
+			</div>
+			<div class="w3-col w3-card-4 w3-margin-top brd" id="10002">
+				<h4 class="w3-col m6 w3-left-align">이동혁</h4>
+				<h6 class="w3-third w3-right-align w3-right">2022.05.02</h6>
+				<div class="bdy">
+					<hr style="clear:left;">
+					<p>황인준 남친 왔다감</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

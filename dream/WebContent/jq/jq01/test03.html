@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#s1').siblings().css('border', '1px solid red');	// id=s1 태그의 형제태그 (자신은 해당X)
+		
+		// 모든 a 태그 선택=>css적용=>첫번째꺼 골라서=>css적용
+		$('a').css('display', 'inline-block').first().css('color', 'blue');
+		
+		// index 기준 짝수, 홀수 css 따로 적용
+		$('li:odd').css('color', 'orange');
+		$('li:even').css('background-color', 'aqua');
+		
+		// 형제 태그들 중 n번째 태그 적용
+		$('li:nth-child(2)').css('border', '1px solid blue');
+		
+		// n번째 li 태그 적용
+		$('li:eq(1)').css('font-size', '16pt');
+		
+		
+	});
+</script>
+</head>
+<body>
+	<div class='w3-content w3-center mx650'>
+		<h1 class="w3-blue">타이틀</h1>
+		<div id="d1">
+			<p>abcd</p>
+			<a>efg</a>
+			<a>efg</a>
+			<a>efg</a>
+			<a>efg</a>
+			<a>efg</a>
+			<span id="s1">span</span>
+			<label>label</label>
+		</div>
+		<div class="w3-col">
+			<ul>
+				<span>리스트 태그</span>
+				<li>목록1</li>
+				<li>목록2</li>
+				<li>목록3</li>
+				<li>목록4</li>
+				<li>목록5</li>
+				<li>목록6</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

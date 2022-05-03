@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// id=d1 태그를 선택, 아이디값 출력
+		var did = $('#d1').attr('id');
+		alert(did);
+		
+		$('#d1').attr('class', 'w3-content mx650 w3-center');
+		$('#h1').html('속성 다루는 함수 연습용');
+		$('#h1').attr('class', 'w3-blue');
+		$('#h1').attr('id', 'head1');
+		
+		var txt = $('#head1').html();
+		alert(txt);
+		
+//		$('#d1').removeAttr('class');	// 제거도 가능!
+		// removeClass(클래스명)	도 가능하긴 함.
+		
+		
+		// 버튼 클릭 함수
+		$('#btn').click(function(){
+			$('#head1').toggleClass('hddn');
+		});
+		
+		$('#d1').attr('style', 'clear: left; display: inline-block; width: 200px; height: 200px; borer: 1px solid gray');
+		
+		
+		// 체크 속성 기능 : prop
+		$(':checked').prop('checked', false);
+		$('[value="M"]').prop('checked', true);
+
+		$('#body').change(function(){
+			var txt1 =  $('input').eq(1).html();	// M 값 꺼내기
+			
+			// textarea 태그에 다시 값 보여주기
+			$(this).val('re : ' + txt1);
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<div id="d1">
+		<h1 id="h1"></h1>
+		<div class="w3-col w3-button w3-margin-top w3-indigo" id="btn">Button</div>
+		<div id="d2">
+			<div> 여자 <input type="radio" name="gen" value="F" checked></div>
+			<div> 남자 <input type="radio" name="gen" value="M"></div>
+			<textarea id="body" class="w3-col" rows="10" style="resize:none;"></textarea>
+		</div>
+	</div>
+</body>
+</html>

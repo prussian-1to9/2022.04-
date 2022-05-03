@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<style type="text/css">
+	body {
+		padding: 30px;
+		text-align: center;
+		font-size: 0pt;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		border: 1px solid gray;
+		font-size: 12pt;
+		margin-left: 10px;
+		padding-top: 37px;
+	}
+</style>
+<script type="text/javascript">
+	var clrList = ['w3-red', 'w3-pink', 'w3-purple', 'w3-deep-purple', 'w3-indigo', 
+		'w3-blue', 'w3-aqua'];
+</script>
+</head>
+<body>
+	<div class="box">div1</div>
+	<div class="box">div2</div>
+	<div class="box">div3</div>
+	<div class="box">div4</div>
+	<div class="box">div5</div>
+	<div class="box">div6</div>
+	<div class="box">div7</div>
+<script type="text/javascript">
+	var boxAll = document.getElementsByClassName('box');
+	for(var i=0; i<7; i++){
+		var str = 'box ' + clrList[i];
+		boxAll[i].setAttribute('class', str);	// str 변수 생성 없이 'box ' + clrList[i]도 OK
+	}
+</script>
+</body>
+</html>

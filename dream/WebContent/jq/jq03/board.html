@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DREAM BOARD</title>
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/w3.css">
+<link rel="stylesheet" type="text/css" href="/dream/resources/css/base.css">
+<script type="text/javascript" src="/dream/resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	// 클릭시 글번호 나오게 하는 방법1 : function으로 처리(일반적)
+	// 나중에 최상의 div태그 onclick 액션을 func01로 지정해주면 된다. (방법2는 맨 밑에)
+	function func01(el){
+		var sid = $(this).attr('id');
+		alert(sid);
+	}
+	
+	$(document).ready(function(){
+		$('#btn').click(function(){
+			// JSON 문서 호출
+			$.ajax({
+				url:'/dream/jq/jq03/board.json',
+				type:'post',
+				dataType: 'JSON',
+				data: {},
+				success: function(arr){
+					if(arr.length<=0){
+						alert('데이터를 불러올 수 없습니다.');
+						return;
+					}
+					// 버튼 태그 감추기
+				//	$('#btn').addClass('hidden'); 로 해도 되고
+					$('#btn').remove();	// 도 가능
+					
+					for(var i=0; i<arr.length; i++){
+						var data = arr[i];
+						
+						$('#brd').append(// 만든 html문서 입력
+								'<div class="w3-col w3-card-4 pd10" id="' + data.bno +'"><!--게시글 하나-->' +
+									'<div class="w3-col pdr10 w3-border-right" style="width: 160px;"><!--아바타 이미지 박스-->' +
+										'<div class="avtbox overhidden box">' +
+											'<img src="/dream/resources/img/avatar/'+ data.savename + '" class="avtimg">' +
+										'</div>' +
+										'<h4 class="w3-center">' + data.id + '</h4>' +
+									'</div>' +
+									'<div class="w3-rest pd10"><!--게시글 박스-->' +
+										'<div class="w3-col">' +
+											'<h4 class="w3-half w3-left-align overhidden"><span>' + data.title + '</h4>' +
+											'<h4 class="w3-half w3-right-align">' + data.wdate + '</h4>' +
+										'</div>' +
+										'<hr class="leftclear">' +
+										'<div class="w3-col w3-padding">' +
+											'<p style="margin: 0px;">' + data.body.replace(/\r\n/g, '<br>') + '</p>' +
+											// replace 로 엔터키 살려주기
+										'</div>' +
+									'</div>' +
+								'</div>');
+						
+						// 클릭시 글번호 나오게 하는 방법2 : 반복문으로 함수 넣어주기.
+						$('#' + data.bno).click(function(){
+							var sid = $(this).attr('id');
+							alert(sid);
+						});
+					}
+					
+					// 가시화
+					$('#brd').removeClass('hidden');
+					
+				},
+				error: function(){
+					alert('통신 에러');
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="w3-content mx650">
+		<h1 class="w3-yellow w3-padding w3-card-4 w3-center w3-text-blue"><b>Dream Board</b></h1>
+		<div class="w3-col hidden" id="brd">
+<!--
+			<div class="w3-col w3-card-4 pd10">게시글 하나
+				<div class="w3-col pdr10 w3-border-right" style="width: 160px;">아바타 이미지 박스
+					<div class="avtbox overhidden box">
+						<img src="/dream/resources/img/avatar/noimage.jpg" class="avtimg">
+					</div>
+					<h4 class="w3-center">T_raum_</h4>
+				</div>
+				<div class="w3-rest pd10">게시글 박스
+					<div class="w3-col">
+						<h4 class="w3-half w3-left-align overhidden">타이틀</h4>
+						<h4 class="w3-half w3-right-align">2022/05/03</h4>
+					</div>
+					<hr class="leftclear">
+					<div class="w3-col w3-padding">
+						<p style="margin: 0px;">You and I 넌 유일한 나의 바다, 난 너의 눈에 잠겨
+							You and I 그 안에 나 살고 싶어 I will dive into you</p>
+					</div>
+				</div>
+			</div>
+-->
+		</div>
+		<div class="w3-col w3-margin-top">
+			<div class="w3-col w3-button w3-blue" id="btn">click</div>
+		</div>
+	</div>
+</body>
+</html>
